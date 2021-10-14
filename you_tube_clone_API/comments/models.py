@@ -2,10 +2,10 @@ from django.db import models
 
 # Create your models here.
 class Comment(models.Model):
-    body = models.TextField(max_length=250, null=True)
+    body = models.TextField(max_length=250)
     like = models.IntegerField()
     dislike = models.IntegerField()
-    videoID = models.TextField(max_length=50, null=True)
+    videoID = models.TextField(max_length=50)
     
 
 class Replies(models.Model):
