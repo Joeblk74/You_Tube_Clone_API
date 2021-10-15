@@ -1,4 +1,4 @@
-from django.shortcuts import render
+# from django.shortcuts import render
 from .models import Comment
 from .models import Replies
 from .serializer import CommentSerializer
