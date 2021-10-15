@@ -3,9 +3,9 @@ from .models import Comment
 from .models import Replies
 from .serializer import CommentSerializer
 from .serializer import RepliesSerializer
-from rest_Framework.views import APIView
-from rest_Framework.response import Response
-from rest_Framework import status
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
 
 
 # Create your views here.
