@@ -24,6 +24,14 @@ class VideoComments (APIView):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
+class VideoCommentsDetail (APIView):
+    def get(self, request, video):
+        comments = Comment.objects.filter(videoID = video)
+        serializer = CommentSerializer (comments, many=True)
+        return Response(serializer.data)
+
+
+
 class Replies (APIView):
     
     def get(self, request):
